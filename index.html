@@ -6,50 +6,59 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show it</title>
     <link rel="shortcut icon" href="./favicon.png">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu">
             <!--Este es el logo de la empresa, no tengo el editable aún-->
-            <img src="./images/logos/show it blanco.png" alt="logo_show_it" width="60" height="60">
-            <ul>
-                <li>
+            <img src="./images/logos/logo show it blanco.png" alt="logo_show_it" class="menu__logo">
+            <ul class="menu__lista">
+                <li class="menu__item">
                     <a href="./index.html">Home</a>
                 </li>
-                <li>
+                <li class="menu__item">
                     <a href="./pages/projects.html">Projects</a>
                 </li>
-                <li>
+                <li class="menu__item">
                     <a href="./pages/clients.html">Clients</a>
                 </li>
-                <li>
+                <li class="menu__item">
                     <a href="./pages/about_us.html">About us</a>
                 </li>
-                <li>
+                <li class="menu__item">
                     <a href="./pages/contact.html">Contact</a>
                 </li>
             </ul>
-        </nav>
+        </nav>    
     </header>
-    <!---->
-    <main>
-        <!--Este sería el slogan de la empresa que estará escrito en legras grandes y mayúsculas, de izq a der-->
-        <h1>SHOWING THE WORLD BEHIND YOUR BRAND</h1>
-        <!--Este video estará ubicado a la derecha, se reproducirá automáticamente y mostratá un patallazo de los trabajos realizados por la empresa. Estará superpuesto con el slogan-->
-        <video src="./videos/FinalVideo_1633406884.557227.mov" autoplay muted loop width="550" height="550"></video>
-        <!--aquí colocaría alguna escritura explicando brevemente la misión de la empresa-->
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga officiis consequatur facere nesciunt aut perferendis iusto enim obcaecati quod sapiente rem id, eos nostrum animi dolorem debitis placeat eligendi exercitationem?</p>
-
+    <main class="cuerpo-index">
+        <section class="cuerpo-index__1">
+            <section class="cuerpo-index__1__slogan">
+                <div class="cuerpo-index__1__slogan__showing"><h1>SHOWING</h1></div>
+                <div class="cuerpo-index__1__slogan__world"><h1>THE WORLD BEHIND</h1></div>
+                <div class="cuerpo-index__1__slogan__your"><h1>YOUR</h1></div>
+                <div class="cuerpo-index__1__slogan__brand"><h1>BRAND</h1></div>
+                    
+            </section>
+            <section class="cuerpo-index__1__video">
+                <video src="./videos/FinalVideo_1633406884.557227.mov" autoplay muted loop></video>
+            </section>
+        </section>
+        <section class="descripcion">
+            <div class="descripcion__caja"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga officiis consequatur facere nesciunt aut perferendis iusto enim obcaecati quod sapiente rem id, eos nostrum animi dolorem debitis placeat eligendi exercitationem?</p></div>
+        </section>
     </main>
-    
-    <footer>
-        <!--Me interesa que el footer este siempre fijo en cada page para que tengan la posibilidad de entrar a las redes en todo momento-->
-        <img src="./images/logos/instagram.png" alt="instagram">
-        <a href="https://www.instagram.com/showit.worldwide/" target="blank" im><p>/@showit.worldwide</p></a>
-        <img src="./images/logos/facebook.png" alt="instagram">
-        <a href="https://www.facebook.com" target="blank" im><p>/facebook</p></a>
-    </footer>
 
-    
+    <footer class="pie">
+        <div class="pie__instagram">
+            <img src="./images/logos/instagram.png" alt="instagram">
+            <a href="https://www.instagram.com/showit.worldwide/" target="blank" im><p>/@showit.worldwide</p></a>
+        </div>
+        <div class="pie__facebook">    
+            <img src="./images/logos/facebook.png" alt="instagram">
+            <a href="https://www.facebook.com" target="blank" im><p>/facebook</p></a>
+        </div>
+    </footer>  
 </body>
 </html>

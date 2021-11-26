@@ -6,42 +6,48 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show it</title>
     <link rel="shortcut icon" href="./../favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu">
             <!--Este es el logo de la empresa, no tengo el editable aún-->
-            <img src="./../images/logos/show it blanco.png" alt="logo_show_it" width="60" height="60">
-            <ul>
-                <li>
-                <a href="./../index.html">Home</a>
-                </li>                    
-                <li>
-                    <a href="projects.html">Projects</a>
+            <img src="../images/logos/logo show it blanco.png" alt="logo_show_it" class="menu__logo">
+            <ul class="menu__lista">
+                <li class="menu__item">
+                    <a href="../index.html">Home</a>
                 </li>
-                <li>
-                    <a href="clients.html">Clients</a>
+                <li class="menu__item">
+                    <a href="./projects.html">Projects</a>
                 </li>
-                <li>
-                    <a href="about_us.html">About us</a>
+                <li class="menu__item">
+                    <a href="./clients.html">Clients</a>
                 </li>
-                <li>
-                    <a href="contact.html">Contact</a>
+                <li class="menu__item">
+                    <a href="./about_us.html">About us</a>
+                </li>
+                <li class="menu__item">
+                    <a href="./contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!--En esta parte se colocara una descripcion e historia de los integrantes de la empresa-->
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolorem quod ex voluptatum? Eum ad provident delectus quaerat nisi labore, architecto, et sed laudantium, accusamus quam cupiditate voluptatibus nulla consequatur?
+        <div class="cuerpo-about">
+            <!--En esta parte se colocara una descripcion e historia de los integrantes de la empresa-->
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum dolorem quod ex voluptatum? Eum ad provident delectus quaerat nisi labore, architecto, et sed laudantium, accusamus quam cupiditate voluptatibus nulla consequatur?
+        </div>
     </main>
-    <footer>
-        <!--Me interesa que el footer este siempre fijo en cada page para que tengan la posibilidad de entrar a las redes en todo momento-->
-        <img src="../images/logos/instagram.png" alt="instagram">
-        <a href="https://www.instagram.com/showit.worldwide/" target="blank" im><p>/@showit.worldwide</p></a>
-        <img src="../images/logos/facebook.png" alt="instagram">
-        <a href="https://www.facebook.com" target="blank" im><p>/facebook</p></a>
+    <footer class="pie">
+        <div class="pie__instagram">
+            <img src="../images/logos/instagram.png" alt="instagram">
+            <a href="https://www.instagram.com/showit.worldwide/" target="blank" im><p>/@showit.worldwide</p></a>
+        </div>
+        <div class="pie__facebook">    
+            <img src="../images/logos/facebook.png" alt="instagram">
+            <a href="https://www.facebook.com" target="blank" im><p>/facebook</p></a>
+        </div>
     </footer>
 
 </body>

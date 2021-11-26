@@ -6,54 +6,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Show it</title>
     <link rel="shortcut icon" href="./../favicon.png">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
     <header>
-        <nav>
+        <nav class="menu">
             <!--Este es el logo de la empresa, no tengo el editable aún-->
-            <img src="./../images/logos/show it blanco.png" alt="logo_show_it" width="60" height="60">
-            <ul>
-                <li>
-                <a href="./../index.html">Home</a>
-                </li>                    
-                <li>
-                    <a href="projects.html">Projects</a>
+            <img src="../images/logos/logo show it blanco.png" alt="logo_show_it" class="menu__logo">
+            <ul class="menu__lista">
+                <li class="menu__item">
+                    <a href="../index.html">Home</a>
                 </li>
-                <li>
-                    <a href="clients.html">Clients</a>
+                <li class="menu__item">
+                    <a href="./projects.html">Projects</a>
                 </li>
-                <li>
-                    <a href="about_us.html">About us</a>
+                <li class="menu__item">
+                    <a href="./clients.html">Clients</a>
                 </li>
-                <li>
-                    <a href="contact.html">Contact</a>
+                <li class="menu__item">
+                    <a href="./about_us.html">About us</a>
+                </li>
+                <li class="menu__item">
+                    <a href="./contact.html">Contact</a>
                 </li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>OUR PROJECTS</h1>
-        <!--En esta seccion colocaria imagenes clickeables que redireccionan a cada projecto en particular-->
-        <a href="./blackbird.html"><img src="../images/landing/blackbird.jpg" alt="blackbird" width="150"></a>
-        <!--por el momento solo usare el ejemplo del diseno de marca blackbird y vis-->
-        <a href="./vis.html"><img src="../images/landing/vis.png" alt="vis" width="150"></a>
-        <img src="../images/landing/DSC03150.jpg" alt="cocinero" width="150">
-        <img src="../images/landing/DSC03514.jpg" alt="puente" width="150">
-        <img src="../images/landing/calimac.PNG" alt="remera" width="150">
-        <img src="../images/landing/IMG_4702_jpg.JPG" alt="perro" width="150">
-        <img src="../images/landing/DSC04166.jpg" alt="sushi" width="150">
-        <img src="../images/landing/DSC03885.jpg" alt="" width="150">
-        <br>
-        <button>See more</button>
-        
+    <main class="cuerpo-projects">
+        <section class="cuerpo-projects__title">
+            <h2 class="cuerpo-projects__title__1">OUR </h2>
+            <h2 class="cuerpo-projects__title__2">PROJECTS</h2>
+        </section>
+        <section class="cuerpo-projects__fotos">
+            <!--En esta seccion colocaria imagenes clickeables que redireccionan a cada projecto en particular-->
+            
+            <a href="./blackbird.html" class="cuerpo-projects__fotos__blackbird"><img src="../images/landing/blackbird.jpg" alt="blackbird"></a>
+            
+            <!--por el momento solo usare el ejemplo del diseno de marca blackbird y vis-->
+            
+            <a href="./vis.html"><img src="../images/landing/vis.png" alt="vis"></a>
+            
+                
+            <img src="../images/landing/DSC03150.jpg" alt="cocinero">
+            
+            <img src="../images/landing/DSC03514.jpg" alt="puente">
+            
+            <img src="../images/landing/calimac.PNG" alt="remera">
+            
+            <img src="../images/landing/IMG_4702_jpg.JPG" alt="perro">
+            
+            <img src="../images/landing/DSC04166.jpg" alt="sushi">
+            
+            <img src="../images/landing/DSC03885.jpg" alt="mujer">
+            
+        </section>
     </main>
-    <footer>
-        <!--Me interesa que el footer este siempre fijo en cada page para que tengan la posibilidad de entrar a las redes en todo momento-->
-        <img src="../images/logos/instagram.png" alt="instagram">
-        <a href="https://www.instagram.com/showit.worldwide/" target="blank" im><p>/@showit.worldwide</p></a>
-        <img src="../images/logos/facebook.png" alt="instagram">
-        <a href="https://www.facebook.com" target="blank" im><p>/facebook</p></a>
+    <footer class="pie">
+        <div class="pie__instagram">
+            <img src="../images/logos/instagram.png" alt="instagram">
+            <a href="https://www.instagram.com/showit.worldwide/" target="blank" im><p>/@showit.worldwide</p></a>
+        </div>
+        <div class="pie__facebook">    
+            <img src="../images/logos/facebook.png" alt="instagram">
+            <a href="https://www.facebook.com" target="blank" im><p>/facebook</p></a>
+        </div>
     </footer>
 
 </body>
