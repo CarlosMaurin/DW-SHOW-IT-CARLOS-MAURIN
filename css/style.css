@@ -1,330 +1,306 @@
-/* ESTILO COMUN A TODAS LAS PAGINAS */
-
-* {
+*{
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-body{
-    
+/* -----------GRID DE LAYOUT INDEX----------------- */
+
+.body-index{
     background-color: #212529;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     color: white;
-    min-height: 100vh;
-} 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.9fr 5fr 0.5fr;
 
+}
+
+.body__header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    
+}
+.body-index__main{
+    grid-column: 1/3;
+    grid-row: 2/3;
+    display: flex;
+    justify-content: space-around;
+}
+.body__footer{
+    grid-column: 1/3;
+    grid-row: 3/4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333533;
+    
+    
+    
+}
+
+/* ------------------------------------------------------------------------------------------------- */
+
+/* ----------------------------------ESTILO PARA NAV COMUN A TODOS------------------------------------------------ */
 .menu{
     display: flex;
     width: 100%;
-    background-color: #333533;
     justify-content: space-between;
-    align-items: center;
+    background-color: #333533;
+    position: fixed;
 }
-
 .menu__logo{
-    width: 100px;
+    
+    width: 150px;
     height: 100px;
-    margin-left: 10px;
-}
+    padding-left: 15px;
 
+}
 .menu__lista{
     display: flex;
     width: 50%;
-    justify-content: space-evenly;
+    justify-content: space-around;
+    align-items: center;
+    
 }
-
-.menu__item{
+.menu__lista__item{
     list-style: none;
-    margin-left: 10px;
-    margin-right: 10px;
+    
+    
 }
 
-.menu__item a{
+.menu__lista__item a{
     text-decoration: none;
     color: white;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
-.menu li:hover{
+.menu__lista li:hover{
     text-decoration: underline;
-} 
-
-
-/* ESTILO PARA INDEX */
-
-
-.cuerpo-index__1{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-} 
-
-.cuerpo-index__1__video{
-    display: flex;
-    width: 100%;
-    
-    height: 650px;
-    margin-top: 20px;
-    justify-content: flex-end;
-    margin-right: 170px;
 }
 
-.cuerpo-index__1__slogan{
-    display: flex;
-    width: 100%;
-    flex-flow: column;
-    position:absolute; 
-    z-index:1;
-    margin-left: 30px;
+/* --------------------------------------------------------------------------------------------------------------------- */
+
+/* ------------------------------------------------ESTILO PARA MAIN DE INDEX------------------------------------------------------- */
+
+.cuerpo-index__slogan{
+    display: grid;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(6, 0.1fr);
+    padding-left: 15px;
 }
 
-.cuerpo-index__1__slogan__showing{
+.cuerpo-index__slogan__1{
+    font-size: 60px;
     color: #A4161A;
-    font-size: 90px;
-}
-
-.cuerpo-index__1__slogan__world{
-    font-size: 55px;
-    width: 100%;
+    grid-column: 1/3;
+    grid-row: 1/2;
     
-
+    
 }
-.cuerpo-index__1__slogan__your{
+.cuerpo-index__slogan__2{
+    font-size: 40px;
+    grid-column: 1/4;
+    grid-row: 2/3;
+    
+}
+.cuerpo-index__slogan__3{
+    font-size: 40px;
     color: #B4AFAF;
-    font-size: 30px;
+    grid-column: 1/2;
+    grid-row: 3/4;
+    
 }
-.cuerpo-index__1__slogan__brand{
-    color: #A4161A;
+.cuerpo-index__slogan__4{
     font-size: 100px;
-    margin-left: 100px;
-    padding-top: 0;
+    color: #A4161A;
+    grid-column: 2/4;
+    grid-row: 3/5;
+    align-items: flex-start;
     
 }
 
-.descripcion{
+.cuerpo-index__video{
+    width: 50%;
     display: flex;
-    width: 100%;
+    justify-content: center;
+    padding-top: 10px;
     
-    padding-left: 100px;
-    padding-bottom: 20px ;
-    box-sizing: border-box;
-    
-}
-.descripcion__caja{
-    
-    border: solid #0C0C0C;
-    width: 40%;
-    background-color: #0C0C0C;
-    border-radius: 25px;
-    padding: 10px;
+}    
+.cuerpo-index__descripcion{
+    border: solid 2px;
+    background-color: black;
     text-align: justify;
-    margin-bottom: 10px;
-    box-sizing: border-box;
-    
+    padding-left: 10px;
+    grid-column: 1/4;
+    grid-row: 6/7;
 }
 
-/* FOOTER ESTILO COMUN A TODAS LAS PAGINAS */
+/* -------------------------------------------------------------------------------------------- */
 
-.pie{
+/* ----------------------------------ESTILO PARA FOOTER------------------------------------------- */
+
+.footer__instagram{
     display: flex;
-    background-color: #333533;
-    justify-content: space-between;
-    padding-left: 30px;
-    padding-right: 30px;
+    
+    width: 50%;
+    height: 30px;
+    align-items: center;
+    padding-left: 15px;
+    
+}
+.footer__facebook{
+    display: flex;
+    width: 50%;
+    height: 30px;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 15px;
+    
     
 }
 
-.pie a{
+.footer__instagram p{
+    font-weight: bold;
     color: white;
-    font-weight: bolder;
     text-decoration: none;
 }
-.pie__instagram{
-    display: flex;
-    align-items: center;
-    margin: 10px;
+
+.footer__facebook p{
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+/* ---------------------------------------------------------------------------------------- */
+
+/* ----------------------------ESTILO PARA MAIN DE PROJECTS------------------------------------ */
+
+.body-projects{
+    background-color: #212529;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 9fr 0.5fr;
+
 }
 
-.pie__facebook{
+.body-projects__main{
     display: flex;
-    align-items: center;
-    margin: 10px;
-}
-
-
-/* ESTILO PARA CONTACT */
-
-.cuerpo-contact{
-    display: flex;
-    height: 78vh;
     flex-flow: column;
-    justify-content: space-between
-}
-.cuerpo-contact__title{
-    display: flex;
-    justify-content: center;
-    
-}
-.cuerpo-contact__title__contact{
-    color: #A4161A;
-    font-size: 100px;
-    margin-right: 15px;
-}
-.cuerpo-contact__title__us{
-    font-size: 75px;
-    padding-top: 26px;
-    margin-left: 15px;
-}
-.cuerpo-contact__cells{
-    display: flex;
-    justify-content: space-between;
-    height: 75vh;
-}
-.cuerpo-contact__cells__content{
-    display: flex;
-    width: 50%;
-    max-width: 30%;
-    flex-flow: column;
-    justify-content: center;
-    
-    padding-left: 35px;
-    margin: 10px;
-}
-.cuerpo-contact__cells__content input{
-    margin: 10px;
-    border-radius: 25px;
-    height: 25px;
-    padding: 12px;
+    width: 100%;
+    height: auto;
     box-sizing: border-box;
+    grid-column: 1/3;
+    grid-row: 2/3;
+
 }
 
-.cuerpo-contact__text-area{
+
+.body-projects__title{
     display: flex;
-    width: 50%;
-    max-width: 40%;
-    flex-flow: column;
     justify-content: center;
+    margin-bottom: 30px ;
     
-    padding-right: 35px;
-    margin: 10px;
-}
-.cuerpo-contact__text-area textarea{
-    border-radius: 25px;
-    margin-top: 15px;
-
-}
-
-.cuerpo-contact__text-area p{
-    font-weight: bolder;
-    align-self: center;
     
 }
-.cuerpo-contact__text-area__buttons{
-    display: flex;
+.body-projects__title__2{
+    color: #A4161A;
+    font-size: 100px;
+    margin-left: 10px;
+}
+.body-projects__title__1{
+    font-size: 75px;
+    padding-top: 26px;
+    margin-right: 10px;
+}
+
+.body-projects__fotos{
+    display: grid;
     width: 100%;
-    justify-content: center;
-
-}
-.cuerpo-contact__text-area__buttons input{
-    margin: 10px;
-    width: 70px;
-}
-
-/* ESTILO PARA PROJECTS */
-
-.cuerpo-projects{
-    display: flex;
-    height: 70vh;
-    flex-flow: column;
-    justify-content: space-between
-}
-.cuerpo-projects__title{
-    display: flex;
-    justify-content: center;
+    height: 1350px;
+    box-sizing: border-box;
+    grid-template-columns: 1fr 1.25fr 1.25fr 1.5fr;
+    grid-template-rows: 2fr 2fr 2fr 2fr ;
+    gap: 7px;
     
 }
-.cuerpo-projects__title__2{
-    color: #A4161A;
-    font-size: 100px;
-    margin-left: 10px;
-}
-.cuerpo-projects__title__1{
-    font-size: 75px;
-    padding-top: 26px;
-    margin-right: 10px;
-}
-
-.cuerpo-projects__fotos{
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    margin: 20px;
-    height: 100vh;
-}
-
-.cuerpo-projects__fotos img{
-    width: 300px;
-    height: 250px;
-    margin: 10px;
-}
-
-/* ESTILO PARA CLIENTES */
-
-.cuerpo-clientes{
-    display: flex;
-    flex-direction: column;
-}
-
-.cuerpo-clientes__title{
-    display: flex;
-    justify-content: center;
+.body-projects__fotos__elemento1{
+    background-color: tomato;
+    /* grid-area: elemento1; */
+    grid-column: 1/2;
+    grid-row: 1/3;
+    background-image: url(../images/landing/blackbird.jpg);
+    background-size: cover;
+    background-position: center;
+    
     
 }
-.cuerpo-clientes__title__2{
-    color: #A4161A;
-    font-size: 100px;
-    margin-left: 10px;
+.body-projects__fotos__elemento2{
+    background-color: wheat;
+    /* grid-area: elemento2; */
+    grid-column: 2/4;
+    background-image: url(../images/landing/vis.png);
+    background-size: cover;
+    background-position: center;
 }
-.cuerpo-clientes__title__1{
-    font-size: 75px;
-    padding-top: 26px;
-    margin-right: 10px;
+.body-projects__fotos__elemento3{
+    background-color: yellowgreen;
+    /* grid-area: elemento3; */
+    grid-column: 4/5;
+    grid-row: 1/2;
+    background-image: url(../images/landing/DSC03150.jpg);
+    background-size: cover;
+    background-position: center;
+    
 }
-
-.cuerpo-clientes__images{
-    display: flex;
-    justify-content: space-evenly;
+.body-projects__fotos__elemento4{
+    background-color: black;
+    /* grid-area: elemento4; */
+    grid-column: 2/3;
+    grid-row: 2/4;
+    background-image: url(../images/landing/DSC03514.jpg);
+    background-size: cover;
+    background-position: center;
 }
-
-/* ESTILO PARA ABOUT US */
-
-.cuerpo-about{
-    display: flex;
-    height: 78vh;
-    flex-direction: column;
-    justify-content: space-between;
+.body-projects__fotos__elemento5{
+    background-color: blue;
+    /* grid-area: elemento5; */
+    grid-column: 3/5;
+    grid-row: 2/4;
+    background-image: url(../images/landing/calimac.PNG);
+    background-size: cover;
+    background-position: center;
 }
-
-.cuerpo-about__title{
-    display: flex;
-    justify-content: center;
-
+.body-projects__fotos__elemento6{
+    background-color: red;
+    /* grid-area: elemento6; */
+    grid-column: 1/2;
+    grid-row: 3/5;
+    background-image: url(../images/landing/IMG_4702_jpg.JPG);
+    background-size: cover;
+    background-position: center;
 }
-
-.cuerpo-about__title__about{
-    color: #A4161A;
-    font-size: 100px;
-    margin-right: 10px;
-
+.body-projects__fotos__elemento7{
+    background-color: turquoise;
+    /* grid-area: elemento7; */
+    grid-column: 2/3;
+    grid-row: 4/5;
+    background-image: url(../images/landing/DSC04166.jpg);
+    background-size: cover;
+    background-position: center;
 }
-
-.cuerpo-about__title__us{
-    font-size: 75px;
-    padding-top: 26px;
-    margin-left: 10px;
-
+.body-projects__fotos__elemento8{
+    background-color: green;
+    /* grid-area: elemento8; */
+    grid-column: 3/5;
+    grid-row: 4/5;
+    background-image: url(../images/landing/DSC03885.jpg);
+    background-size: cover;
+    background-position: center;
 }
-
-
 
 
